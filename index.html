@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/892bb677d3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <figure>
+      <img src="imagenes/logo.jpg" alt="">
+    </figure>
+  </header>
+
+  <section>
+
+    <article class="arti_texto">
+
+      <h3><span>Our Team</span></h3>
+      <h1>A Dedicated Team of Experts</h1>
+      <br>
+      <p>Passion, experience and a fierce commitment to education are
+        the cornerstones of our success in the beauty industry</p>
+      <br>
+      <p><span>We believe that being the largest SPA in the area is not enough in itself to satisfy the
+          needs of our customers. For this reason we have built up a staff of specialized
+          professionals who are proud to welcome you to our hotel, present What We Do, listen
+          to your needs and guarantee well-being and relaxation during your stay at our SPA
+          Resort.
+          <br><br>
+          Everyone in our team is a certified specialist capable of delivering a unique service of
+          high quality you won't find anywhere else in modem spa and resort industry.</span></p>
+      <br>
+      <div class="div_btns">
+        <a href="#" class="button_1">LEARN MORE</a>
+        <a href="#" class="button_2">VIEW ALL TEAM</a>
+      </div>
+    </article>
+
+    <div class="div_arti">
+
+      <article>
+        <figure>
+          <img src="imagenes/foto1.jpg" alt="">
+        </figure>
+        <br>
+        <h2>Jessica Cooper</h2>
+        <p>Esthetician</p>
+        <br>
+        <div class="div_social">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <br>
+        <a href="#" class="button_1" id="abrir_modal">GET IN TOUCH</a>
+      </article>
+
+      <article>
+        <figure>
+          <img src="imagenes/foto2.jpg" alt="">
+        </figure>
+        <br>
+        <h2>Robert Wagner</h2>
+        <p>Hairdresser</p>
+        <br>
+        <div class="div_social">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <br>
+        <a href="#" class="button_1" id="abrir_modal">GET IN TOUCH</a>
+      </article>
+    </div>
+  </section>
+
+  <div class="modal" id="div_modal">
+
+    <div class="icon_x">
+      <i class="fa-solid fa-circle-xmark" id="cerrar_modal"></i>
+    </div>
+    <form action="">
+      <h1>Contact Us</h1>
+      <p><span>If you have any questions concerning our services, please fill out the
+          contact form below.</span></p>
+      <input type="text" placeholder="Name *">
+      <input type="email" placeholder="E-mail *">
+      <input type="text" placeholder="Message *" class="inputmsg">
+      <button type="submit" class="button_3">SUBMIT</button>
+    </form>
+  </div>
+
+  <footer>
+    <h1>Denilson Nuñez</h1>
+  </footer>
+
+  <script>
+    $("#abrir_modal").click(function () {
+      $("#div_modal").addClass("mostrar");
+    })
+
+    $("#cerrar_modal").click(function () {
+      $("#div_modal").removeClass("mostrar");
+    });
+
+    /* ------------------------------------- */
+
+    function tiempo() {
+      $("#div_modal").addClass("mostrar")
+    }
+    setTimeout(tiempo, 5000);
+
+    /* ------------------------------------- */
+
+    window.onclick = function (event) {
+      if (event.target == div_modal) {
+        $("#div_modal").removeClass("mostrar")
+      }
+    }
+
+    /* ------------------------------------- */
+
+    document.addEventListener("keydown", function (event) {
+      if (event.target == "escape") {
+        $("#div_modal").removeClass("mostrar");
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>
